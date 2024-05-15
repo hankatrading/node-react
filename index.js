@@ -22,6 +22,7 @@ passport.use(
   )
 );
 
+app.get("/", (req, res) => { res.send("Homepage") });
 app.get("/auth/google", passport.authenticate("google", { scope: ["profile", "email"] }));
 app.get("/auth/google/callback", passport.authenticate("google"));
 
