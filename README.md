@@ -6,3 +6,5 @@ Version management      : GitHub (google-oauth)
 Permission Mang.        : Passport JS, Strategy: Google OAuth
 Runtime                 : Heroku (Deployment)
 Database                : MongoDB
+
+Hinweis                 : Passport Version 0.5 funktioniert. In der Version 0.7 (aktuell die neueste Version) kommt es zur Fehlermeldung mit der Sessionverwaltung
