@@ -1,4 +1,4 @@
 node_modules
 .env
 .gcloudignore
-dev.js
+config/dev.js
