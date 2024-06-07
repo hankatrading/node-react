@@ -1,5 +1,5 @@
-node_modules
+node_modules/
+app.yaml
+dev.js
 .env
 .gcloudignore
-app.yaml
-config/dev.js
