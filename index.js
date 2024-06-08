@@ -4,11 +4,9 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const key = require("./config/key");
 
-require("dotenv").config();
-
 let app = express();
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(key.MONGODB_URI);
 
 app.use(
   cookieSession({
@@ -23,7 +21,7 @@ require("./model/User");
 require("./service/passport");
 require("./routes/auth")(app);
 
-let PORT = process.env.PORT || 5000;
+let PORT = key.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`App listening at port ${PORT}`);
