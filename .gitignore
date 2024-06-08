@@ -1,6 +1,5 @@
 node_modules/
 app.yaml
 dev.js
-README.md
 .env
 .gcloudignore
