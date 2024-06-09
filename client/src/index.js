@@ -1,7 +1,15 @@
 import ReactDOM from "react-dom/client";
 import App from "./component/App";
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import reducer from "./reducer";
 
+let store = createStore(reducer, {}, applyMiddleware());
 let el = document.getElementById("root");
 let root = ReactDOM.createRoot(el);
 
-root.render(<App />);
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
