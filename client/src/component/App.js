@@ -1,21 +1,22 @@
 const React = require("react");
 const { BrowserRouter, Route } = require("react-router-dom");
-
-let Header = () => <h2>Header</h2>;
-let Dashboard = () => <h2>Dashboard</h2>;
-let SurveyNew = () => <h2>SurveyNew</h2>;
-let Landing = () => <h2>Landing</h2>;
+const Header = require("./Header").default;
+const Dashboard = require("./Dashboard").default;
+const Landing = require("./Landing").default;
+const SurveyNew = require("./SurveyNew").default;
 
 let App = () => {
   return (
-    <BrowserRouter>
-      <div>
-        <Header />
-        <Route exact={true} path="/" component={Landing} />
-        <Route exact path="/surveys" component={Dashboard} />
-        <Route path="/surveys/new" component={SurveyNew} />
-      </div>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Route exact={true} path="/" component={Landing} />
+          <Route exact path="/surveys" component={Dashboard} />
+          <Route path="/surveys/new" component={SurveyNew} />
+        </div>
+      </BrowserRouter>
+    </div>
   );
 };
 
