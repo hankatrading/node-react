@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+/*
+const Component = require("react");
 
 class Header extends Component {
   render() {
-    return <div>Header</div>;
+    return <h1>Header</h1>;
   }
 }
 
-export default Header;
+module.exports = getHeader;
+*/
