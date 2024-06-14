@@ -5,19 +5,22 @@ const Dashboard = require("./Dashboard").default;
 const Landing = require("./Landing").default;
 const SurveyNew = require("./SurveyNew").default;
 
-let App = () => {
-  return (
-    <div>
-      <BrowserRouter>
-        <div>
-          <Header />
-          <Route exact={true} path="/" component={Landing} />
-          <Route exact path="/surveys" component={Dashboard} />
-          <Route path="/surveys/new" component={SurveyNew} />
-        </div>
-      </BrowserRouter>
-    </div>
-  );
-};
+class App extends React.Component {
+  componentDidMount() {}
+  render() {
+    return (
+      <div>
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Route exact={true} path="/" component={Landing} />
+            <Route exact path="/surveys" component={Dashboard} />
+            <Route path="/surveys/new" component={SurveyNew} />
+          </div>
+        </BrowserRouter>
+      </div>
+    );
+  }
+}
 
 export default App;
