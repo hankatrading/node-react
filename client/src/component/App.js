@@ -1,3 +1,6 @@
+import { connect } from "react-redux";
+import * as actions from "../action";
+
 const React = require("react");
 const { BrowserRouter, Route } = require("react-router-dom");
 const Header = require("./Header").default;
@@ -6,7 +9,9 @@ const Landing = require("./Landing").default;
 const SurveyNew = require("./SurveyNew").default;
 
 class App extends React.Component {
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.fetchUser();
+  }
   render() {
     return (
       <div>
@@ -23,4 +28,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect(null, actions)(App);
