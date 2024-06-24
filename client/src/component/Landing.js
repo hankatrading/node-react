@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 
-class Landing extends React.Component {
+class Landing extends Component {
   render() {
     return (
       <div style={{ textAlign: "center" }}>

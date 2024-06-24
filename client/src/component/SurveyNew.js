@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 
-class SurveyNew extends React.Component {
+class SurveyNew extends Component {
   render() {
     return <h2>SurveyNew</h2>;
   }

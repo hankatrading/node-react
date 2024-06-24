@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import Payment from "./Payment";
 
-class Header extends React.Component {
+class Header extends Component {
   renderContent() {
     switch (this.props.auth) {
       case null:
@@ -14,11 +15,14 @@ class Header extends React.Component {
           </li>
         );
       default:
-        return (
-          <li>
+        return [
+          <li key="1">
+            <Payment />
+          </li>,
+          <li key="2">
             <a href="/api/logout">Logout</a>
-          </li>
-        );
+          </li>,
+        ];
     }
   }
 

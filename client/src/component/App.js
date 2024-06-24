@@ -1,14 +1,13 @@
 import { connect } from "react-redux";
 import * as actions from "../action";
+import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import Header from "./Header";
+import Dashboard from "./Dashboard";
+import Landing from "./Landing";
+import SurveyNew from "./SurveyNew";
 
-const React = require("react");
-const { BrowserRouter, Route } = require("react-router-dom");
-const Header = require("./Header").default;
-const Dashboard = require("./Dashboard").default;
-const Landing = require("./Landing").default;
-const SurveyNew = require("./SurveyNew").default;
-
-class App extends React.Component {
+class App extends Component {
   componentDidMount() {
     this.props.fetchUser();
   }
