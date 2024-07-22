@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "atom": "^1.4.2",
     "body-parser": "^1.20.2",
     "concurrently": "^8.2.2",
     "cookie-session": "^2.1.0",
