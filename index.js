@@ -24,6 +24,16 @@ require("./service/passport");
 require("./routes/auth")(app);
 require("./routes/billing-routes")(app);
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+
+  let path = require("path");
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
 let PORT = key.PORT || 5000;
 
 app.listen(PORT, () => {
