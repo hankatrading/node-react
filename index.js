@@ -16,10 +16,12 @@ app.use(
     keys: [key.COOKIEKEY],
   })
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
 
 require("./model/User");
+
 require("./service/passport");
 require("./routes/auth")(app);
 require("./routes/billing-routes")(app);
