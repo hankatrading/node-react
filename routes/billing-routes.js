@@ -4,9 +4,7 @@ const stripe = require("stripe")(keys.STRIPE_SECRET_KEY);
 
 module.exports = (app) => {
   app.post("/api/stripe", async (req, res) => {
-    let isLoggedIn = requireLogin;
-    console.log("Is logged in", isLoggedIn);
-    if (isLoggedIn) {
+    if (requireLogin) {
       try {
         let data = {
           amount: 500,
