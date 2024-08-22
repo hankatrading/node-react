@@ -3,15 +3,13 @@ const keys = require("../config/key");
 
 class Mailer {
   constructor({ subject, recipients }, content) {
-    super();
-
     this.mailgun = mailgun({
       apiKey: keys.MAILGUN_KEY,
       domain: keys.MAILGUN_SANDBOX,
     });
 
     this.data = {
-      from: "your_mailgun_email@gmail.com",
+      from: "cengiz.tuerkoglu@gmail.com",
       to: this.formatAddresses(recipients),
       subject: subject,
       html: content,

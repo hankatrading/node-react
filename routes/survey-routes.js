@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const requireLogin = require("../middleware/requireLogin");
 const requireCredit = require("../middleware/requireCredit");
 const Mailer = require("../service/Mailer");
-const surveyTemplate = require("../services/emailTemplates/surveyTemplate");
+const surveyTemplate = require("../service/emailTemplate/surveyTemplate");
 
 const Survey = mongoose.model("Survey");
 
