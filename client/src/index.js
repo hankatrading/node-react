@@ -5,6 +5,9 @@ import { Provider } from "react-redux";
 import reducer from "./reducer";
 import "materialize-css/dist/css/materialize.min.css";
 import { thunk } from "redux-thunk";
+import axios from "axios";
+
+window.axios = axios;
 
 let store = createStore(reducer, {}, applyMiddleware(thunk));
 let el = document.getElementById("root");

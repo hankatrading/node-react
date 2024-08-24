@@ -9,7 +9,7 @@ class Mailer {
     });
 
     this.data = {
-      from: "cengiz.tuerkoglu@gmail.com",
+      from: `Absender <mail@${keys.MAILGUN_SANDBOX}>`,
       to: this.formatAddresses(recipients),
       subject: subject,
       html: content,
