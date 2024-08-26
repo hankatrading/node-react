@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./Header";
 import Dashboard from "./Dashboard";
 import Landing from "./Landing";
-import SurveyNew from "./SurveyNew";
+import SurveyNew from "./surveys/SurveyNew";
 
 class App extends Component {
   componentDidMount() {
@@ -13,7 +13,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="container">
         <BrowserRouter>
           <div>
             <Header />

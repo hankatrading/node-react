@@ -7,4 +7,5 @@ module.exports = {
   CI: process.env.CI,
   STRIPE_PUBLIC_KEY: process.env.STRIPE_PUBLIC_KEY,
   STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+  REDIRECT_DOMAIN: process.env.REDIRECT_DOMAIN,
 };
