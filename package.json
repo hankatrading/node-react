@@ -9,6 +9,7 @@
     "env": "^0.0.2",
     "express": "^4.19.2",
     "form-data": "^4.0.0",
+    "localtunnel": "^2.0.2",
     "mailgun-js": "^0.22.0",
     "mongodb": "^6.7.0",
     "mongoose": "^8.4.1",
@@ -29,8 +30,9 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix --no-audit --no-found client && npm run build --prefix client",
+    "webhook": "lt -p 5000 -s emailysd"
   },
   "author": "",
   "license": "ISC"
